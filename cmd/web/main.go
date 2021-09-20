@@ -2,13 +2,22 @@ package main
 
 import (
 	"fmt"
+	"go-web-app/pkg/config"
 	"go-web-app/pkg/handlers"
+	"go-web-app/pkg/render"
+	"log"
 	"net/http"
 )
 
 const portNumber = ":8082"
 
 func main() {
+	var app config.AppConfig
+	tc, err := render.CreateTemplateCache()
+	if err != nil {
+		log.Fatal("cannot craete template cache")
+	}
+	app.TemplateCache = tc
 	http.HandleFunc("/", handlers.Home)
 	http.HandleFunc("/about", handlers.About)
 
