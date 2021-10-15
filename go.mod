@@ -4,6 +4,7 @@ go 1.16
 
 require (
 	github.com/aquasecurity/libbpfgo v0.2.1-libbpf-0.4.0 // indirect
+	github.com/bmizerany/pat v0.0.0-20210406213842-e4b6760bdd6f // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.1 // indirect
 	github.com/go-delve/delve v1.7.2 // indirect
 	github.com/google/go-dap v0.6.0 // indirect

@@ -25,11 +25,16 @@ func main() {
 
 	render.NewTemplate(&app)
 
-	http.HandleFunc("/", handlers.Repo.Home)
-	http.HandleFunc("/about", handlers.Repo.About)
+	fmt.Printf("Starting application on port %s", portNumber)
 
-	fmt.Println(fmt.Sprintf("Starting application on port %s", portNumber))
+	srv := &http.Server{
+		Addr:    portNumber,
+		Handler: routes(&app),
+	}
 
-	// _ = means that if there is an error, pay no attention to it
-	_ = http.ListenAndServe(portNumber, nil)
+	err = srv.ListenAndServe()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 }
