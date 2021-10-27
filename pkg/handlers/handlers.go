@@ -1,10 +1,12 @@
 package handlers
 
 import (
+	"encoding/json"
 	"fmt"
 	"go-web-app/pkg/config"
 	"go-web-app/pkg/models"
 	"go-web-app/pkg/render"
+	"log"
 	"net/http"
 )
 
@@ -58,6 +60,30 @@ func (m *Repository) Generals(w http.ResponseWriter, r *http.Request) {
 // Availability renders the search availability page
 func (m *Repository) Availability(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "search-availability.page.tmpl", &models.TemplateData{})
+}
+
+type jsonResponse struct {
+	Ok      bool   `json:"ok`
+	Message string `json:"message"`
+}
+
+// AvailabilityJSON handles request for availability and sends JSON response
+func (m *Repository) AvailabilityJSON(w http.ResponseWriter, r *http.Request) {
+	resp := jsonResponse{
+		Ok:      true,
+		Message: "Available!",
+	}
+
+	out, err := json.MarshalIndent(resp, "", "     ")
+
+	if err != nil {
+		log.Println(err)
+	}
+
+	log.Println(string(out))
+	w.Header().Set("Content-Type", "application/json")
+
+	w.Write(out)
 }
 
 // PostAvailability renders the search availability page
