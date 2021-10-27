@@ -3,8 +3,8 @@ package render
 import (
 	"bytes"
 	"fmt"
-	"go-web-app/pkg/config"
-	"go-web-app/pkg/models"
+	"go-web-app/internal/config"
+	"go-web-app/internal/models"
 	"html/template"
 	"log"
 	"net/http"

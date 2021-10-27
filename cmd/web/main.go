@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"go-web-app/pkg/config"
-	"go-web-app/pkg/handlers"
-	"go-web-app/pkg/render"
+	"go-web-app/internal/config"
+	"go-web-app/internal/handlers"
+	"go-web-app/internal/render"
 	"log"
 	"net/http"
 	"time"

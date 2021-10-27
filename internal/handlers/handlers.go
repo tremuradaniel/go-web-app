@@ -3,9 +3,9 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
-	"go-web-app/pkg/config"
-	"go-web-app/pkg/models"
-	"go-web-app/pkg/render"
+	"go-web-app/internal/config"
+	"go-web-app/internal/models"
+	"go-web-app/internal/render"
 	"log"
 	"net/http"
 )

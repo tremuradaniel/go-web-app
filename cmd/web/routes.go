@@ -1,8 +1,8 @@
 package main
 
 import (
-	"go-web-app/pkg/config"
-	"go-web-app/pkg/handlers"
+	"go-web-app/internal/config"
+	"go-web-app/internal/handlers"
 	"net/http"
 
 	"github.com/go-chi/chi"
