@@ -8,3 +8,5 @@
 * ``` go test -v .\cmd\web\. ``` - run tests in main
 * ``` go test -cover .\cmd\web\. ``` - run tests coverage in main
 * ``` go test -coverprofile=coverage.out && go tool cover -html=coverage.out .\cmd\web\. ``` - detailed coverage for html - might not work as it is on windows
+``` go test -coverprofile=overage.out""coverage.out" ```
+``` go tool cover -html="coverage.out" ```
