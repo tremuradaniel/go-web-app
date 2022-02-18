@@ -50,7 +50,7 @@ func getRoutes() http.Handler {
 
 	mux.Use(middleware.Recoverer)
 	// mux.Use(WriteToConsole)
-	mux.Use(NoSurf)
+	// mux.Use(NoSurf) ---- not important to test here crsf, so it's commented out
 	mux.Use(SessionLoad)
 
 	mux.Get("/", Repo.Home)
