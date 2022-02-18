@@ -61,6 +61,6 @@ func run() error {
 	repo := handlers.NewRepo(&app)
 	handlers.NewHandlers(repo)
 
-	render.NewTemplate(&app)
+	render.NewTemplates(&app)
 	return nil
 }
