@@ -10,3 +10,8 @@
 * ``` go test -coverprofile=coverage.out && go tool cover -html=coverage.out .\cmd\web\. ``` - detailed coverage for html - might not work as it is on windows
 ``` go test -coverprofile=overage.out""coverage.out" ```
 ``` go tool cover -html="coverage.out" ```
+
+<h3>Scripts</h3>
+<h4>Windows</h4>
+1. ``` .\run.bat ``` - create exe
+2. ``` .\booking.exe ``` - run exe to start server
